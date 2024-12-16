@@ -48,7 +48,7 @@ const AdministrarUsuarios = () => {
   useEffect(() => {
     const fetchUsuarios = async () => {
       try {
-        const response = await fetch("http://localhost:3000/usuarios");
+        const response = await fetch("http://3.147.58.209:8181/usuarios");
         if (!response.ok) throw new Error("Error al cargar usuarios");
         const data = await response.json();
         setUsuarios(data);
@@ -109,7 +109,7 @@ const AdministrarUsuarios = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:3000/usuarios", {
+      const response = await fetch("http://3.147.58.209:8181/usuarios", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(nuevoUsuario),
@@ -143,7 +143,7 @@ const AdministrarUsuarios = () => {
   // Eliminar un usuario
   const handleDeleteUsuario = async (rut) => {
     try {
-      const response = await fetch(`http://localhost:3000/usuarios/${rut}`, {
+      const response = await fetch(`http://3.147.58.209:8181/usuarios/${rut}`, {
         method: "DELETE",
       });
 

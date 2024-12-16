@@ -13,7 +13,7 @@ const CederTonner = () => {
     // Cargar los tóners al iniciar
     const fetchTonners = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/toners");
+        const response = await axios.get("http://3.147.58.209:8181/toners");
         setTonners(response.data);
       } catch (error) {
         console.error("Error al obtener tóners:", error);
@@ -33,7 +33,7 @@ const CederTonner = () => {
     }
 
     try {
-      await axios.delete(`http://localhost:3000/toners/${selectedTonner}`);
+      await axios.delete(`http://3.147.58.209:8181/toners/${selectedTonner}`);
       setSuccessMessage("Tóner cedido correctamente.");
       setTonners((prevTonners) =>
         prevTonners.filter((tonner) => tonner.idToner !== parseInt(selectedTonner))

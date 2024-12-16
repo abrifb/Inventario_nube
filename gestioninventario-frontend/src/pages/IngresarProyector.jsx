@@ -11,7 +11,7 @@ const IngresarProyector = () => {
     // Cargar proveedores al iniciar
     const fetchProveedores = async () => {
       try {
-        const response = await fetch("http://localhost:3000/proveedores");
+        const response = await fetch("http://3.147.58.209:8181/proveedores");
         if (!response.ok) throw new Error("Error al obtener proveedores");
         const data = await response.json();
         setProveedores(data);
@@ -24,7 +24,7 @@ const IngresarProyector = () => {
     // Cargar proyectores al iniciar
     const fetchProyectores = async () => {
       try {
-        const response = await fetch("http://localhost:3000/proyectores");
+        const response = await fetch("http://3.147.58.209:8181/proyectores");
         if (!response.ok) throw new Error("Error al obtener proyectores");
         const data = await response.json();
         setProyectores(data);
@@ -61,7 +61,7 @@ const IngresarProyector = () => {
     };
 
     try {
-      const response = await fetch("http://localhost:3000/proyectores", {
+      const response = await fetch("http://3.147.58.209:8181/proyectores", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -25,7 +25,7 @@ const Reportes = () => {
 
     // Aquí puedes realizar la llamada al backend para generar y descargar el reporte.
     // Ejemplo de llamada API:
-    // fetch(`http://localhost:3000/reportes?startDate=${startDate}&endDate=${endDate}&reportType=${reportType}`)
+    // fetch(`http://3.147.58.209:8181/reportes?startDate=${startDate}&endDate=${endDate}&reportType=${reportType}`)
     //   .then(response => response.blob())
     //   .then(blob => {
     //     const url = window.URL.createObjectURL(blob);

@@ -14,7 +14,7 @@ const EditarMovimiento = () => {
 
   const obtenerToners = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/toners");
+      const response = await axios.get("http://3.147.58.209:8181/toners");
       setToners(response.data);
     } catch (error) {
       console.error("Error al obtener tóners:", error);
@@ -44,7 +44,7 @@ const EditarMovimiento = () => {
     }
 
     try {
-      await axios.put(`http://localhost:3000/toners/${idToner}`, {
+      await axios.put(`http://3.147.58.209:8181/toners/${idToner}`, {
         marca,
         color: color || null,
         contenido,

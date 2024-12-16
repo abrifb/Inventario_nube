@@ -11,7 +11,7 @@ const IngresarTonner = () => {
     // Cargar proveedores al iniciar
     const fetchProveedores = async () => {
       try {
-        const response = await fetch("http://localhost:3000/proveedores");
+        const response = await fetch("http://3.147.58.209:8181/proveedores");
         if (!response.ok) throw new Error("Error al obtener proveedores");
         const data = await response.json();
         setProveedores(data);
@@ -24,7 +24,7 @@ const IngresarTonner = () => {
     // Cargar tóners al iniciar
     const fetchTonners = async () => {
       try {
-        const response = await fetch("http://localhost:3000/toners");
+        const response = await fetch("http://3.147.58.209:8181/toners");
         if (!response.ok) throw new Error("Error al obtener tóners");
         const data = await response.json();
         setTonners(data);
@@ -61,7 +61,7 @@ const IngresarTonner = () => {
     };
 
     try {
-      const response = await fetch("http://localhost:3000/toners", {
+      const response = await fetch("http://3.147.58.209:8181/toners", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -24,7 +24,7 @@ const Proveedores = () => {
 
   const obtenerProveedores = () => {
     axios
-      .get("http://localhost:3000/proveedores")
+      .get("http://3.147.58.209:8181/proveedores")
       .then((response) => setProveedores(response.data))
       .catch((error) =>
         console.error("Error al obtener proveedores:", error)
@@ -42,7 +42,7 @@ const Proveedores = () => {
     if (isEditing) {
       // Actualizar un proveedor existente
       axios
-        .put(`http://localhost:3000/proveedores/${form.rut_proveedor}`, form)
+        .put(`http://3.147.58.209:8181/proveedores/${form.rut_proveedor}`, form)
         .then(() => {
           alert("Proveedor actualizado correctamente");
           obtenerProveedores();
@@ -54,7 +54,7 @@ const Proveedores = () => {
     } else {
       // Agregar un nuevo proveedor
       axios
-        .post("http://localhost:3000/proveedores", form)
+        .post("http://3.147.58.209:8181/proveedores", form)
         .then(() => {
           alert("Proveedor agregado correctamente");
           obtenerProveedores();
@@ -74,7 +74,7 @@ const Proveedores = () => {
   const handleDelete = (rut_proveedor) => {
     if (window.confirm("¿Estás seguro de que deseas eliminar este proveedor?")) {
       axios
-        .delete(`http://localhost:3000/proveedores/${rut_proveedor}`)
+        .delete(`http://3.147.58.209:8181/proveedores/${rut_proveedor}`)
         .then(() => {
           alert("Proveedor eliminado correctamente");
           obtenerProveedores();

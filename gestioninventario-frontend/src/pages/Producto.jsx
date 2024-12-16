@@ -32,7 +32,7 @@ const Producto = () => {
 
     const obtenerProductos = () => {
         setLoading(true);
-        axios.get('http://localhost:3000/productos')
+        axios.get('http://3.147.58.209:8181/productos')
             .then(response => {
                 setProductos(response.data);
                 setLoading(false);
@@ -44,7 +44,7 @@ const Producto = () => {
     };
 
     const obtenerProveedores = () => {
-        axios.get('http://localhost:3000/proveedores')
+        axios.get('http://3.147.58.209:8181/proveedores')
             .then(response => setProveedores(response.data))
             .catch(error => console.error('Error al obtener proveedores:', error));
     };
@@ -62,7 +62,7 @@ const Producto = () => {
         }
 
         if (isEditing) {
-            axios.put(`http://localhost:3000/productos/${form.idProducto}`, form)
+            axios.put(`http://3.147.58.209:8181/productos/${form.idProducto}`, form)
                 .then(() => {
                     alert('Producto actualizado');
                     obtenerProductos();
@@ -70,7 +70,7 @@ const Producto = () => {
                 })
                 .catch((error) => handleError(error));
         } else {
-            axios.post('http://localhost:3000/productos', form)
+            axios.post('http://3.147.58.209:8181/productos', form)
                 .then(() => {
                     alert('Producto agregado');
                     obtenerProductos();
@@ -87,7 +87,7 @@ const Producto = () => {
 
     const handleDelete = (id) => {
         if (window.confirm('¿Estás seguro de eliminar este producto?')) {
-            axios.delete(`http://localhost:3000/productos/${id}`)
+            axios.delete(`http://3.147.58.209:8181/productos/${id}`)
                 .then(() => {
                     alert('Producto eliminado');
                     obtenerProductos();

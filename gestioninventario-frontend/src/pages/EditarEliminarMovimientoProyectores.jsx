@@ -14,7 +14,7 @@ const EditarEliminarMovimientoProyectores = () => {
 
   const obtenerProyectores = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/proyectores");
+      const response = await axios.get("http://3.147.58.209:8181/proyectores");
       setProyectores(response.data);
     } catch (error) {
       console.error("Error al obtener proyectores:", error);
@@ -53,7 +53,7 @@ const EditarEliminarMovimientoProyectores = () => {
     }
 
     try {
-      await axios.put(`http://localhost:3000/proyectores/${idProyector}`, {
+      await axios.put(`http://3.147.58.209:8181/proyectores/${idProyector}`, {
         modelo,
         resolucion: resolucion || null,
         luminosidad: luminosidad || null,

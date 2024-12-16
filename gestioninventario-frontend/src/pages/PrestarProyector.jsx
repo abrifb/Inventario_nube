@@ -11,7 +11,7 @@ const PrestarProyector = () => {
   useEffect(() => {
     const fetchProyectores = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/proyectores");
+        const response = await axios.get("http://3.147.58.209:8181/proyectores");
         setProyectores(response.data);
       } catch (error) {
         console.error("Error al obtener proyectores:", error);
@@ -26,7 +26,7 @@ const PrestarProyector = () => {
 
   const handleDelete = async (idProyector) => {
     try {
-      await axios.delete(`http://localhost:3000/proyectores/${idProyector}`);
+      await axios.delete(`http://3.147.58.209:8181/proyectores/${idProyector}`);
       setProyectores((prevProyectores) =>
         prevProyectores.filter((proyector) => proyector.idProyector !== idProyector)
       );
