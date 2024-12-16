@@ -1,0 +1,99 @@
+body {
+  background-color: #f4f7fc;
+}
+
+.card {
+  border-radius: 0.5rem;
+}
+
+.card-header {
+  font-size: 1.25rem;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+table th, table td {
+  text-align: center;
+}
+
+.table {
+  font-size: 0.9rem;
+}
+
+.table th {
+  background-color: #e9ecef;
+  text-align: center;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+}
+
+.btn-success {
+  background-color: #28a745;
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .card-body {
+    padding: 1rem;
+  }
+
+  .card-header h3 {
+    font-size: 1.5rem;
+  }
+
+  .table {
+    font-size: 0.8rem;
+  }
+
+  .form-label {
+    font-size: 0.875rem;
+  }
+
+  .form-control {
+    font-size: 0.875rem;
+  }
+
+  .btn-success, .btn-secondary {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 30px;
+  }
+
+  .table {
+    font-size: 0.85rem;
+  }
+
+  .form-label {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .container {
+    max-width: 1200px;
+  }
+
+  .form-control, .form-label {
+    font-size: 1rem;
+  }
+
+  .btn-success, .btn-secondary {
+    width: auto;
+  }
+}

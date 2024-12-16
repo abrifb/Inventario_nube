@@ -1,0 +1,69 @@
+/* Estilo para centrar el contenedor de inicio de sesión */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9; /* Fondo global */
+    font-family: Arial, sans-serif; /* Fuente global */
+  }
+  
+  /* Contenedor para centrar el formulario */
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Asegura que el contenedor ocupe toda la ventana */
+    width: 100%;
+    background-color: #f9f9f9;
+  }
+  
+  /* Formulario de inicio de sesión */
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 320px;
+    background: #ffffff;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  /* Input del formulario */
+  .login-form input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  /* Botón del formulario */
+  .login-form button {
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Ajuste para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .login-form {
+      width: 90%; /* Reduce el tamaño del formulario */
+      padding: 20px;
+    }
+  }
+  

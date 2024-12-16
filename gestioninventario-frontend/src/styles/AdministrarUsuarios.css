@@ -1,0 +1,81 @@
+.container {
+  margin: 2rem auto;
+  max-width: 1200px; /* Limitar el ancho máximo */
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.card {
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap; /* Permitir que las columnas se ajusten */
+  gap: 1rem;
+}
+
+.col-md-4 {
+  flex: 1 1 calc(33.333% - 1rem); /* Usar una fracción del espacio disponible */
+  max-width: calc(33.333% - 1rem);
+  min-width: 250px; /* Ajustar ancho mínimo para evitar columnas muy pequeñas */
+}
+
+@media (max-width: 1024px) {
+  .col-md-4 {
+    flex: 1 1 100%; /* Ocupan el ancho completo en pantallas pequeñas */
+    max-width: 100%;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  overflow-x: auto; /* Hacer que la tabla sea desplazable horizontalmente */
+}
+
+.table-wrapper {
+  overflow-x: auto; /* Asegurarse de que las tablas largas sean desplazables */
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  word-wrap: break-word; /* Ajustar contenido largo */
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .form-control, .form-select {
+    width: 100%;
+    padding: 0.75rem;
+  }
+
+  button[type="submit"], button[type="button"] {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .table {
+    font-size: 0.875rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+}
